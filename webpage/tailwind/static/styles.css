@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+.table-wrapper {
+    position: relative;
+    max-height: 568px; /* Atur tinggi maksimum sesuai kebutuhan Anda */
+    overflow-y: auto;
+    display: block;
+}
+
+.table-wrapper table thead th {
+    position: sticky;
+    top: 0;
+    background: #F9F9F9;
+    z-index: 10;
+}

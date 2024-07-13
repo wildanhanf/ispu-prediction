@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    transparent: 'transparent',
+                    current: 'currentColor',
+                    'bilu': '#3252DF',
+                    'bilu-gelap': '#152C5B',
+                    'abu': '#F9F9F9',
+                },
+                fontFamily: {
+                    pop: ['Poppins']
+                }
+            }
+        }
+    }
+  </script>
+  <link href="../static/styles.css" rel="stylesheet">
+</head>
+<body>    
+
+    <nav class="bg-white border-b border-gray-200 shadow">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-8 ">
+            <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-lg">
+                <li>
+                    <a href="#" class="font-pop text-bilu">Tentang</a>
+                </li>
+                <li>
+                    <a href="/ispu" class="font-pop text-bilu-gelap hover:underline">Prediksi</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+      
+    <div class="mx-auto max-w-full bg-abu px-24 py-28 max-h-fit">
+        <h1 class="text-3xl font-extrabold tracking-tight text-bilu-gelap md:text-3xl md:px-10 lg:text-5xl text-bilu-gelap text-center">
+            Prediksi Indeks Standar Pencemar Udara di DKI Jakarta Berdasarkan Polutan PM2.5 Menggunakan Metode <i>Long Short Term Memory</i>
+        </h1>
+    </div>
+
+    <div class="flex pt-12 px-6 md:px-20 justify-center bg-hero md:h-screen overflow-hidden">
+        <div class="flex flex-col gap-6 md:flex-row items-center max-w-8xl">
+            <div class="w-full md:w-1/2 font-pop">
+                <h2 class="text-3xl lg:text-3xl text-center md:text-left text-bilu-gelap leading-tight font-semibold">
+                    Tentang
+                </h2>
+                <p class="mt-6 md:mt-10 text-md lg:text-xl text-center md:text-left text-bilu-gelap font-normal tracking-wider leading-relaxed">
+                    <strong>Indeks Standar Pencemar Udara (ISPU)</strong> adalah sebuah satuan nilai yang digunakan oleh Pemerintah Indonesia untuk mengukur kualitas udara. Polusi udara yang sebagian besar disebabkan oleh <i>Particulate Matter 2.5</i> (PM2,5) merupakan ancaman serius bagi kesehatan manusia dan keberlanjutan lingkungan. DKI Jakarta, sebagai salah satu kota dengan tingkat PM2,5 tertinggi di Indonesia, menjadi fokus penelitian ini. Menurut IQAir World Air Quality Report 2022, DKI Jakarta memiliki konsentrasi rata-rata tahunan PM2,5 sebesar 36,2 μg/m³, tujuh kali lipat di atas ambang batas aman WHO. 
+                    <br><br>
+                    Penelitian ini bertujuan untuk memprediksi nilai ISPU di masa depan dengan polutan PM2,5 di DKI Jakarta menggunakan salah satu penerapan deep learning, yaitu <i>Long Short-Term Memory</i> (LSTM). Agar nantinya, pemerintah dan masyarakat dapat lebih aware terhadap ancaman kesehatan di sekitarnya.
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center">
+                <img src="../static/img/ilustration.jpeg" alt="Ilustrasi Pencemaran Udara" class="w-4/5">
+            </div>
+        </div>
+    </div>
+
+    <div class="flex py-12 px-6 md:px-20 bg-hero md:h-screen overflow-hidden bg-abu">
+        <div class="flex flex-col gap-6 md:flex-row items-center justify-around max-w-8xl">
+            <div class="table-wrapper -m-1.5 overflow-x-hidden my-8 mx-auto border-solid border-2 border-gray-200 rounded-md">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-start text-xs font-bold text-black uppercase">Tanggal</th>
+                        <th scope="col" class="px-6 py-3 text-start text-xs font-bold text-black uppercase">ISPU</th>
+                    </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 bg-white">
+                        {% for row in aktual_list %}
+                            <tr>
+                                {% for cell in row %}
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ cell }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>                        
+                </table>
+            </div>
+            <div class="w-full md:w-1/2 font-pop">
+                <h2 class="text-3xl lg:text-3xl text-center md:text-left text-bilu-gelap leading-tight font-semibold">
+                    Data
+                </h2>
+                <p class="mt-6 md:mt-10 text-md lg:text-xl text-center md:text-left text-bilu-gelap font-normal tracking-wider leading-relaxed">
+                    Data yang digunakan adalah data Indeks Standar Pencemaran Udara (ISPU) DKI Jakarta dari Januari 2021 - November 2023. Data bersumber dari website <a class="hover:underline" href="https://satudata.jakarta.go.id/search?q=ispu&halaman=all&kategori=all&topik=all&organisasi=all&status=all&sort=desc&page_no=1">Satudata Jakarta</a>. Data yang telah melalui tahapan data preprocessing berjumlah total 1063 baris data dan data tersebut yang nantinya akan digunakan untuk prediksi ISPU.  
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full font-pop">
+        <h2 class="text-3xl lg:text-3xl mx-20 my-20 text-center md:text-left text-bilu-gelap font-semibold">
+            Visualisasi Data Aktual
+        </h2>
+        <div class="chart-container mx-auto mt-16 mb-8" style="position: relative; height:80vh; width:80vw">
+            <canvas class="mx-auto w-full" id="ispuChart"></canvas>
+        </div>
+    </div>
+
+    <footer class="bg-abu">
+        <div class="w-full max-w-screen-xl mx-auto pb-8">
+            <hr class="py-4 sm:mx-auto" />
+            <span class="block text-sm text-gray-500 sm:text-center">© 2024 • All Rights Reserved • Wildan Hanif Musyaffa • 140810200051</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('ispuChart');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{ aktual_labels | safe }},
+                datasets: [
+                    {
+                        label: 'Aktual ISPU',
+                        backgroundColor: 'rgba(0, 99, 132, 0.2)',
+                        borderColor: 'rgba(0, 99, 132, 1)',
+                        data: {{ aktual_data | safe }},
+                        fill: false,
+                        pointRadius: 0,
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        ticks: {
+                            // Limit the number of ticks on the x-axis
+                            maxTicksLimit: 15
+                        }
+                    },
+                    y: {
+                        beginAtZero: false,
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    transparent: 'transparent',
+                    current: 'currentColor',
+                    'bilu': '#3252DF',
+                    'bilu-gelap': '#152C5B',
+                    'abu': '#F9F9F9',
+                },
+                fontFamily: {
+                    pop: ['Poppins']
+                }
+            }
+        }
+    }
+  </script>
+  <link href="../static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="bg-white border-b border-gray-200 shadow">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-8 px-8">
+            <div class="flex items-center">
+                <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-lg">
+                    <li>
+                        <a href="/" class="font-pop text-bilu-gelap hover:underline">Tentang</a>
+                    </li>
+                    <li>
+                        <a href="#" class="font-pop text-bilu hover:text-bilu">Prediksi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-full bg-abu px-16 py-24 max-h-fit">
+        <h1 class="text-3xl font-semibold tracking-tight text-bilu-gelap md:text-3xl md:px-10 lg:text-3xl text-bilu-gelap font-pop">
+            Prediksi Dengan <i>Long Short Term Memory</i>
+        </h1>
+        <p class="mt-6 md:mt-10 px-10 text-md lg:text-xl md:text-left text-bilu-gelap font-normal tracking-wider leading-relaxed">
+            Dalam <i>machine learning</i>, terdapat <i>deep learning</i> yang mana salah satu algoritmanya akan digunakan dalam penelitian ini, yaitu <strong><i>Long Short Term Memory</i> (LSTM)</strong>. LSTM dipilih menjadi model yang digunakan dalam penelitian ini karena dapat bekerja dengan baik pada data yang kompleks dan data non-linear. Nantinya dari hasil prediksi, pemerintah bisa membuat perencanaan untuk menekan angka PM2,5 seperti <i>early warning system</i>, pengembangan kebijakan atau regulasi terkait, dan optimisasi penggunaan energi dan sumber daya. Juga dapat meningkatkan kesadaran masyarakat untuk menjaga kualitas udara dan lingkungan yang lebih bersih serta melakukan pencegahan untuk diri sendiri terhadap pencemaran yang akan datang.
+        </p>
+    </div>
+
+    <div class="max-w-full bg-white px-16 py-20 max-h-fit">
+        <h1 class="text-3xl font-semibold tracking-tight text-bilu-gelap md:text-3xl md:px-10 lg:text-3xl text-bilu-gelap">
+            Optimal <i>Hyperparameter</i>
+        </h1>
+        <p class="mt-6 md:mt-10 px-10 text-md lg:text-xl md:text-left text-bilu-gelap font-normal tracking-wider leading-relaxed">
+            Berikut adalah <i>hyperparameter</i> terbaik yang telah dilatih oleh penulis.
+        </p>
+        <div class="flex justify-start align px-8 py-4 flex-col md:flex-row">
+            <div class="p-4">
+                <div>
+                    <h2 class="text-2xl py-2 font-semibold tracking-tight text-gray-900 md:text-2xl md:px-10 lg:text-2xl text-bilu-gelap">
+                       Units
+                    </h2>
+                    <h2 class="text-2xl py-2 font-semibold tracking-tight text-gray-900 md:text-2xl md:px-10 lg:text-2xl text-bilu-gelap">
+                        150
+                    </h2>
+                </div>
+            </div>
+            <div class="p-4">
+                <div>
+                    <h2 class="text-2xl py-2 font-semibold tracking-tight text-gray-900 md:text-2xl md:px-10 lg:text-2xl text-bilu-gelap">
+                       Layers
+                    </h2>
+                    <h2 class="text-2xl py-2 font-semibold tracking-tight text-gray-900 md:text-2xl md:px-10 lg:text-2xl text-bilu-gelap">
+                        1
+                    </h2>
+                </div>
+            </div>
+            <div class="p-4">
+                <div>
+                    <h2 class="text-2xl py-2 font-semibold tracking-tight text-gray-900 md:text-2xl md:px-10 lg:text-2xl text-bilu-gelap">
+                       Activation
+                    </h2>
+                    <h2 class="text-2xl py-2 font-semibold tracking-tight text-gray-900 md:text-2xl md:px-10 lg:text-2xl text-bilu-gelap">
+                        tanh
+                    </h2>
+                </div>
+            </div>
+            <div class="p-4">
+                <div>
+                    <h2 class="text-2xl py-2 font-semibold tracking-tight text-gray-900 md:text-2xl md:px-10 lg:text-2xl text-bilu-gelap">
+                       Optimizer
+                    </h2>
+                    <h2 class="text-2xl py-2 font-semibold tracking-tight text-gray-900 md:text-2xl md:px-10 lg:text-2xl text-bilu-gelap">
+                        Adam
+                    </h2>
+                </div>
+            </div>
+            <div class="p-4">
+                <div>
+                    <h2 class="text-2xl py-2 font-semibold tracking-tight text-gray-900 md:text-2xl md:px-10 lg:text-2xl text-bilu-gelap">
+                       Learning Rate
+                    </h2>
+                    <h2 class="text-2xl py-2 font-semibold tracking-tight text-gray-900 md:text-2xl md:px-10 lg:text-2xl text-bilu-gelap">
+                        0.01
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-abu pb-8">
+        <form action="/ispu" method="post">
+            <h1 class="text-3xl ml-16 pt-24 pb-4 font-semibold tracking-tight text-bilu-gelap md:text-3xl md:px-10 lg:text-3xl text-bilu-gelap">
+                Lakukan Prediksi ISPU
+            </h1>
+            <div class="relative max-w-sm ml-16 md:ml-24 mt-10 flex items-center">
+                <div class="flex-initial">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </div>
+                    <input datepicker datepicker-autohide datepicker-min-date="12/01/2023" type="text" name="date-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-full ps-10 p-2.5" placeholder="Select date" autocomplete="off">
+                </div>
+                <div class="flex-initial ml-4">
+                    <input type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 bg-bilu focus:outline-none"></input>
+                </div>
+            </div>
+        </form>
+        <div class="flex flex-col md:flex-row">
+            <div class="-m-1.5 overflow-x-auto my-8 mx-auto">
+                <div class="p-1.5 inline-block align-middle">
+                    <div class="border rounded-lg overflow-hidden">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead>
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-start text-xs font-bold text-black uppercase">Tanggal</th>
+                                <th scope="col" class="px-6 py-3 text-start text-xs font-bold text-black uppercase">ISPU</th>
+                                <th scope="col" class="px-6 py-3 text-start text-xs font-bold text-black uppercase">Kategori</th>
+                            </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                {% for row in future_data_for_table %}
+                                    <tr>
+                                        {% for cell in row %}
+                                            {% if cell == 'Baik' %}
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-black" style="background-color: #34cb34;"><strong>{{ cell }}</strong></td>
+                                            {% elif cell == 'Sedang' %}
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-black" style="background-color: #0473c3;"><strong>{{ cell }}</strong></td>
+                                            {% elif cell == 'Tidak Sehat' %}
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-black" style="background-color: #fbc304;"><strong>{{ cell }}</strong></td>
+                                            {% elif cell == 'Sangat Tidak Sehat' %}
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-black" style="background-color: #ff0404;"><strong>{{ cell }}</strong></td>
+                                            {% elif cell == 'Berbahaya' %}
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-black" style="background-color: black; color: white;"><strong>{{ cell }}</strong></td>
+                                            {% else %}
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ cell }}</td>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="-m-1.5 overflow-x-auto my-8 mx-auto">
+                <div class="p-1.5 inline-block align-middle">
+                    <div class="border rounded-lg overflow-hidden">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead>
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-start text-xs font-bold text-black uppercase">Range</th>
+                                <th scope="col" class="px-6 py-3 text-start text-xs font-bold text-black uppercase">Kategori</th>
+                            </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">0 - 50</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black" style="background-color: #34cb34;"><strong>Sehat</strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">51 - 100</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black" style="background-color: #0473c3;"><strong>Sedang</strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">101 - 200</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black" style="background-color: #fbc304;"><strong>Tidak Sehat</strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">201 - 300</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black" style="background-color: #ff0404;"><strong>Sangat Tidak Sehat</strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">> 301</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black" style="background-color: black; color: white;"><strong>Berbahaya</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chart-container mx-auto" style="position: relative; height:80vh; width:80vw">
+            <canvas class="mx-auto w-full" id="ispuChart"></canvas>
+        </div>
+    </div>
+    
+    <footer class="bg-white">
+        <div class="w-full max-w-screen-xl mx-auto pb-8">
+            <hr class="py-4 sm:mx-auto"/>
+            <span class="block text-sm text-gray-500 sm:text-center">© 2024 • All Rights Reserved • Wildan Hanif Musyaffa • 140810200051</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('ispuChart');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{ labels | safe }},
+                datasets: [
+                    {
+                        label: 'Aktual ISPU',
+                        backgroundColor: 'rgba(0, 99, 132, 0.2)',
+                        borderColor: 'rgba(0, 99, 132, 1)',
+                        data: {{ test_data | safe }},
+                        fill: false,
+                        pointRadius: 0,
+                    },
+                    {
+                        label: 'Prediksi ISPU',
+                        backgroundColor: 'rgba(99, 132, 0, 0.2)',
+                        borderColor: 'rgba(99, 132, 0, 1)',
+                        data: {{ data | safe }},
+                        fill: false,
+                        pointRadius: 0
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        ticks: {
+                            maxTicksLimit: 15
+                        }
+                    },
+                    y: {
+                        beginAtZero: false,
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
